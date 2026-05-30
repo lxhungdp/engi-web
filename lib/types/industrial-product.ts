@@ -1,6 +1,31 @@
+export interface PhoneModel {
+  slug: string;
+  name: string;
+  label: string;
+  bestFor: string[];
+  battery: string;
+  storage: string;
+  camera: string;
+  display: string;
+  chip: string;
+  highlight: string;
+  recommendedUsers: string;
+  highlighted?: boolean;
+  badge?: string;
+}
+
+export interface PhoneFeature {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+}
+
 export type ProductCategory =
-  | "Drone Series"
-  | "Aerial"
+  | "Smartphones"
+  | "Accessories"
+  | "Enterprise"
+  | "Wearables"
   | "Ground Robotics"
   | "Mapping"
   | "IoT Monitoring"
@@ -80,13 +105,14 @@ export interface IndustrialProduct {
   outputs: string[];
   relatedProducts: string[];
   keySpecs: string[];
-  visualType: "drone" | "rover" | "lidar" | "sensor" | "camera";
+  visualType: "phone" | "drone" | "rover" | "lidar" | "sensor" | "camera";
   icon: string;
   mobilityType: string;
   typicalUsers: string;
   dataCaptured: string;
   bestFor: string;
   workflow: { step: number; title: string; description: string }[];
+  isPhoneSeries?: boolean;
   isDroneSeries?: boolean;
   featured?: boolean;
 }

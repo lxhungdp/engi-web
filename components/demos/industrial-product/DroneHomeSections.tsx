@@ -64,12 +64,9 @@ export function ProductEcosystemSection() {
                 ))}
               </ul>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link href={industrialRoutes.droneSeries} className={tc.btnPrimary}>
-                  Explore Aero X2
+                <Link href={industrialRoutes.products} className={tc.btnPrimary}>
+                  View Models
                   <ArrowRight className="h-4 w-4" />
-                </Link>
-                <Link href={industrialRoutes.droneComparison} className={tc.btnSecondary}>
-                  Compare Models
                 </Link>
               </div>
             </div>
@@ -143,10 +140,10 @@ export function DroneApplicationsSection() {
         </div>
         <div className="mt-10 text-center">
           <Link
-            href={industrialRoutes.droneSeries}
+            href={industrialRoutes.products}
             className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-hover"
           >
-            Explore the Aero X2 <ArrowRight className="h-4 w-4" />
+            View models <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>

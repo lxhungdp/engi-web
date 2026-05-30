@@ -102,7 +102,21 @@ function CameraVisual() {
   );
 }
 
+function PhoneVisual() {
+  return (
+    <div className="relative flex aspect-[4/3] items-center justify-center">
+      <div className="w-[100px] overflow-hidden rounded-[1.5rem] border-2 border-border bg-background-muted shadow-mockup">
+        <div className="flex flex-col items-center justify-center gap-2 py-8">
+          <div className="h-12 w-12 rounded-full bg-accent/15 ring-1 ring-accent/25" />
+          <div className="h-1 w-8 rounded-full bg-border" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 const visuals = {
+  phone: PhoneVisual,
   drone: DroneVisual,
   rover: RoverVisual,
   lidar: LidarVisual,

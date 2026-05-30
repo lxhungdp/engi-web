@@ -87,8 +87,8 @@ export function UseCasesPreviewSection() {
           })}
         </div>
         <div className="mt-10 text-center">
-          <Link href={industrialRoutes.solutions} className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-hover">
-            Explore solutions <ArrowRight className="h-4 w-4" />
+          <Link href={industrialRoutes.products} className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-hover">
+            View products <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>

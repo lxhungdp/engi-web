@@ -19,10 +19,7 @@ export function DroneModelCard({
   index = 0,
   variant = "preview",
 }: DroneModelCardProps) {
-  const detailHref =
-    model.slug === "aero-x2"
-      ? industrialRoutes.droneSeries
-      : `${industrialRoutes.droneComparison}#${model.slug}`;
+  const detailHref = industrialRoutes.products;
 
   return (
     <motion.div
@@ -85,7 +82,7 @@ export function DroneModelCard({
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
-            href={industrialRoutes.droneComparison}
+            href={industrialRoutes.products}
             className={cn(tc.btnSecondary, "flex-1 justify-center text-sm")}
           >
             Compare

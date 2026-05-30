@@ -28,8 +28,7 @@ export const demos: Demo[] = [
   {
     id: "industrial-product",
     title: "Industrial Product Website",
-    description:
-      "For industrial products and technical equipment with strong product focus.",
+    description: "Smartphone product website with multi-model lineup.",
     styleTag: "Product Mode",
     href: "/demos/industrial-product",
   },

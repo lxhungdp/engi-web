@@ -27,18 +27,7 @@ export function IndustrialDemoNavbar() {
 
   useEffect(() => setMobileOpen(false), [pathname]);
 
-  const isActive = (href: string) => {
-    if (href === industrialRoutes.droneSeries) {
-      return pathname.includes("smart-inspection-drone");
-    }
-    if (href === industrialRoutes.droneComparison) {
-      return pathname.includes("drone-comparison");
-    }
-    if (href === industrialRoutes.products) {
-      return pathname.startsWith(href) && !pathname.includes("smart-inspection-drone");
-    }
-    return pathname.startsWith(href);
-  };
+  const isActive = (href: string) => pathname === industrialRoutes.home || href.startsWith("#");
 
   return (
     <header
@@ -79,7 +68,7 @@ export function IndustrialDemoNavbar() {
             ))}
             <ThemeToggle />
             <Link href={industrialRoutes.contact} className={cn(tc.btnPrimary, "px-4 py-2 text-sm")}>
-              Request Demo
+              Pre-order
             </Link>
           </div>
 
@@ -122,7 +111,7 @@ export function IndustrialDemoNavbar() {
                 </Link>
               ))}
               <Link href={industrialRoutes.contact} className={cn(tc.btnPrimary, "mt-2 text-center")}>
-                Request Demo
+                Pre-order
               </Link>
             </div>
           </motion.div>

@@ -24,7 +24,7 @@ export function IndustrialDemoFooter() {
         </div>
         <div className="mt-10 border-t border-border pt-6 text-center">
           <p className="text-xs text-foreground-muted">
-            &copy; {new Date().getFullYear()} Vertex Systems Demo. Fictional company
+            &copy; {new Date().getFullYear()} Vertex Mobile Demo. Fictional company
             for demonstration purposes only.
           </p>
         </div>

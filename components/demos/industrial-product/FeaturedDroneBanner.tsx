@@ -41,7 +41,7 @@ export function FeaturedDroneBanner() {
               </p>
             </div>
             <Link
-              href={industrialRoutes.droneSeries}
+              href={industrialRoutes.products}
               className={cn(tc.btnPrimary, "shrink-0 justify-center")}
             >
               Explore Aero Series

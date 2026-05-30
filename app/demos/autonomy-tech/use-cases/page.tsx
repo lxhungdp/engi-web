@@ -1,12 +1,5 @@
-import type { Metadata } from "next";
-import { UseCasesPageContent } from "@/components/demos/autonomy-tech/UseCasesPageContent";
-import { useCasesHero } from "@/lib/data/autonomy-tech/use-cases-data";
+import { redirect } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "Use Cases — NexaBot AI",
-  description: useCasesHero.description,
-};
-
-export default function UseCasesPage() {
-  return <UseCasesPageContent />;
+export default function Page() {
+  redirect("/demos/tech-product");
 }

@@ -1,33 +1,30 @@
 import type { Metadata } from "next";
 import { DroneHero } from "@/components/demos/industrial-product/DroneHero";
 import {
-  ComparisonPreviewSection,
-  DroneApplicationsSection,
-  DroneModelPreviewSection,
-  DroneWorkflowSection,
   IndustriesSection,
   IndustrialCTA,
-  ProductEcosystemSection,
-} from "@/components/demos/industrial-product/DroneHomeSections";
-import { aeroSeriesInfo } from "@/lib/data/industrial-product/drone-data";
+  PhoneFeaturesSection,
+  PhoneModelPreviewSection,
+} from "@/components/demos/industrial-product/PhoneHomeSections";
+import { phoneSeriesInfo } from "@/lib/data/industrial-product/phone-data";
 import { companyInfo } from "@/lib/data/industrial-product/site";
 
 export const metadata: Metadata = {
-  title: `${companyInfo.shortName} — ${aeroSeriesInfo.name}`,
-  description: aeroSeriesInfo.description,
+  title: `${companyInfo.shortName} — ${phoneSeriesInfo.name}`,
+  description: phoneSeriesInfo.description,
 };
 
 export default function IndustrialProductHomePage() {
   return (
     <>
       <DroneHero />
-      <ProductEcosystemSection />
-      <DroneModelPreviewSection />
+      <PhoneModelPreviewSection />
+      <PhoneFeaturesSection />
       <IndustriesSection />
-      <DroneApplicationsSection />
-      <ComparisonPreviewSection />
-      <DroneWorkflowSection />
-      <IndustrialCTA />
+      <IndustrialCTA
+        title="Like this smartphone product website?"
+        description="EngiWeb builds product-focused websites for device brands, hardware companies, and consumer technology businesses."
+      />
     </>
   );
 }

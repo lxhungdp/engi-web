@@ -16,8 +16,8 @@ interface DroneCTAProps {
 }
 
 export function DroneCTA({
-  title = "Need a drone product website like this?",
-  description = "This demo shows how EngiWeb can design a product-focused website for drone manufacturers, robotics companies, hardware startups, and technical equipment businesses.",
+  title = "Like this smartphone product website?",
+  description = "EngiWeb builds product-focused websites for device brands and consumer technology companies.",
   primaryLabel = "Back to EngiWeb",
   primaryHref = "/",
   secondaryLabel = "Request a Website Like This",
@@ -26,17 +26,17 @@ export function DroneCTA({
 }: DroneCTAProps) {
   if (variant === "demo") {
     return (
-      <section className="pb-20">
+      <section id="contact" className="pb-20">
         <div className="mx-auto max-w-2xl px-4 text-center">
           <div className={cn("rounded-2xl px-8 py-10", tc.ctaPanel)}>
             <h2 className="font-heading text-2xl font-bold text-foreground">{title}</h2>
             <p className={cn("mt-3 text-sm", tc.body)}>{description}</p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
               <Link href={industrialRoutes.contact} className={tc.btnPrimary}>
-                Request Drone Demo
+                Pre-order
               </Link>
               <Link href={industrialRoutes.products} className={tc.btnSecondary}>
-                Back to Products
+                View Models
               </Link>
             </div>
           </div>
@@ -46,7 +46,7 @@ export function DroneCTA({
   }
 
   return (
-    <section className="py-20 lg:py-28">
+    <section id="contact" className="py-20 lg:py-28">
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <div className={cn("rounded-3xl px-8 py-14", tc.ctaPanel)}>
           <h2 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">

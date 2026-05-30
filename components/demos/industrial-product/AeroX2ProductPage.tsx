@@ -49,8 +49,8 @@ export function AeroX2ProductPage() {
                 Request Drone Demo
                 <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link href={industrialRoutes.droneComparison} className={tc.btnSecondary}>
-                Compare Aero Models
+              <Link href={industrialRoutes.products} className={tc.btnSecondary}>
+                Compare Models
               </Link>
               <a href="#specifications" className={cn(tc.btnSecondary, "text-center")}>
                 View Technical Specs
