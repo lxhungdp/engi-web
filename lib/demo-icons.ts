@@ -28,6 +28,7 @@ import {
   GraduationCap,
   HardDrive,
   HardHat,
+  Headphones,
   Key,
   Landmark,
   Layers,
@@ -39,6 +40,7 @@ import {
   ListChecks,
   ListTodo,
   Lock,
+  Mail,
   Map,
   Microscope,
   Network,
@@ -64,6 +66,7 @@ import {
   Webhook,
   Wifi,
   Workflow,
+  Wrench,
   Zap,
   type LucideIcon,
 } from "lucide-react";
@@ -98,6 +101,7 @@ const iconMap: Record<string, LucideIcon> = {
   GraduationCap,
   HardDrive,
   HardHat,
+  Headphones,
   Key,
   Landmark,
   Layers,
@@ -109,6 +113,7 @@ const iconMap: Record<string, LucideIcon> = {
   ListChecks,
   ListTodo,
   Lock,
+  Mail,
   Map,
   Microscope,
   Network,
@@ -135,6 +140,7 @@ const iconMap: Record<string, LucideIcon> = {
   Webhook,
   Wifi,
   Workflow,
+  Wrench,
   Zap,
 };
 

@@ -14,16 +14,21 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "EngiWeb — Technical Websites for Engineering Products",
+  title: "ARGOSDYNE — INNOVATING DRONE TECHNOLOGY",
   description:
-    "EngiWeb helps engineering, construction, drone, biotech, and technical companies turn complex products into clear, modern, and conversion-focused websites.",
+    "ARGOSDYNE, an autonomous flying drone control solution company. Self-developed drone self-flight & Unmanned Operating System.",
   keywords: [
-    "engineering website",
-    "technical web design",
-    "construction website",
-    "biotech website",
-    "drone company website",
+    "ARGOSDYNE",
+    "AQUILA-2",
+    "CUNA2",
+    "argosALES",
+    "autonomous drone",
+    "drone station",
+    "ground control system",
   ],
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

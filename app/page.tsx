@@ -1,13 +1,14 @@
-import { Navbar } from "@/components/Navbar";
-import { HeroSection } from "@/components/HeroSection";
-import { ThemePreviewSection } from "@/components/ThemePreviewSection";
-import { ServicesSection } from "@/components/ServicesSection";
-import { IndustriesSection } from "@/components/IndustriesSection";
-import { DemoGallery } from "@/components/DemoGallery";
-import { WhyEngiWeb } from "@/components/WhyEngiWeb";
-import { ProcessSection } from "@/components/ProcessSection";
-import { ContactCTA } from "@/components/ContactCTA";
-import { Footer } from "@/components/Footer";
+import { MainNavbar } from "@/components/MainNavbar";
+import { MainFooter } from "@/components/MainFooter";
+import {
+  HomeHero,
+  ProductPreviewSection,
+  SolutionPreviewSection,
+  PartnersSection,
+  NewsSection,
+  SupportPreviewSection,
+} from "@/components/company/HomeSections";
+import { CTASection } from "@/components/company/CTASection";
 
 export default function Home() {
   return (
@@ -15,20 +16,23 @@ export default function Home() {
       <div className="pointer-events-none fixed inset-0 grid-bg" />
       <div className="pointer-events-none fixed top-0 inset-x-0 h-px glow-line" />
 
-      <Navbar />
+      <MainNavbar />
 
       <main className="relative flex-1">
-        <HeroSection />
-        <ThemePreviewSection />
-        <ServicesSection />
-        <IndustriesSection />
-        <DemoGallery />
-        <WhyEngiWeb />
-        <ProcessSection />
-        <ContactCTA />
+        <HomeHero />
+        <ProductPreviewSection />
+        <SolutionPreviewSection />
+        <PartnersSection />
+        <NewsSection />
+        <SupportPreviewSection />
+        <CTASection
+          title="INNOVATING DRONE TECHNOLOGY"
+          description="ARGOSDYNE, an autonomous flying drone control solution company."
+          primaryLabel="Inquiry"
+        />
       </main>
 
-      <Footer />
+      <MainFooter />
     </>
   );
 }
