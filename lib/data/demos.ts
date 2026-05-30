@@ -36,6 +36,6 @@ export const demos: Demo[] = [
     description:
       "For industrial products and technical equipment with strong product focus.",
     styleTag: "Product Mode",
-    href: "/demos/product-launch",
+    href: "/demos/industrial-product",
   },
 ];
