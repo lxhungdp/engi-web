@@ -1,26 +1,298 @@
 @import "tailwindcss";
 
+/* ─── Light theme (default) ─── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8fafc;
+  --background-muted: #f1f5f9;
+  --background-alt: #ffffff;
+  --background-elevated: #ffffff;
+  --foreground: #0f172a;
+  --foreground-secondary: #475569;
+  --foreground-muted: #64748b;
+  --accent: #0ea5e9;
+  --accent-secondary: #2563eb;
+  --accent-hover: #0284c7;
+  --accent-foreground: #ffffff;
+  --accent-muted: rgba(14, 165, 233, 0.08);
+  --accent-border: rgba(14, 165, 233, 0.28);
+  --border: #e2e8f0;
+  --border-subtle: rgba(148, 163, 184, 0.35);
+  --card: #ffffff;
+  --card-hover: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.88);
+  --input-bg: #f8fafc;
+  --footer-bg: #f1f5f9;
+  --mockup-bg: #ffffff;
+  --mockup-border: #e2e8f0;
+  --mockup-inner: #f8fafc;
+  --shadow-card: 0 1px 3px 0 rgb(15 23 42 / 0.06),
+    0 4px 12px -2px rgb(15 23 42 / 0.05);
+  --shadow-card-hover: 0 8px 24px -6px rgb(15 23 42 / 0.1);
+  --shadow-accent: 0 4px 14px -2px rgb(14 165 233 / 0.35);
+  --shadow-mockup: 0 20px 50px -12px rgb(15 23 42 / 0.12);
+  --grid-line: rgba(14, 165, 233, 0.07);
+  --glow-line-color: rgba(14, 165, 233, 0.18);
+  --hero-glow-1: rgba(14, 165, 233, 0.09);
+  --hero-glow-2: rgba(37, 99, 235, 0.06);
+  --section-tint: rgba(14, 165, 233, 0.03);
+  --cta-gradient-from: rgba(14, 165, 233, 0.08);
+  --cta-gradient-via: #f1f5f9;
+  --cta-gradient-to: rgba(37, 99, 235, 0.06);
+  --selection-bg: rgba(14, 165, 233, 0.2);
+  --selection-color: #0f172a;
+  --toggle-bg: #f1f5f9;
+  --toggle-border: #e2e8f0;
+}
+
+/* ─── Dark theme ─── */
+.dark {
+  --background: #060b14;
+  --background-muted: #0c1220;
+  --background-alt: #0a1020;
+  --background-elevated: #0c1220;
+  --foreground: #f4f4f5;
+  --foreground-secondary: #a1a1aa;
+  --foreground-muted: #71717a;
+  --accent: #06b6d4;
+  --accent-secondary: #3b82f6;
+  --accent-hover: #22d3ee;
+  --accent-foreground: #060b14;
+  --accent-muted: rgba(6, 182, 212, 0.08);
+  --accent-border: rgba(6, 182, 212, 0.25);
+  --border: rgba(255, 255, 255, 0.1);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --card: rgba(255, 255, 255, 0.03);
+  --card-hover: rgba(255, 255, 255, 0.05);
+  --nav-bg: rgba(6, 11, 20, 0.88);
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --footer-bg: #040810;
+  --mockup-bg: rgba(12, 18, 32, 0.85);
+  --mockup-border: rgba(255, 255, 255, 0.1);
+  --mockup-inner: rgba(255, 255, 255, 0.03);
+  --shadow-card: none;
+  --shadow-card-hover: 0 8px 30px -8px rgba(6, 182, 212, 0.12);
+  --shadow-accent: 0 4px 14px -2px rgba(6, 182, 212, 0.35);
+  --shadow-mockup: 0 20px 50px -12px rgba(6, 182, 212, 0.08);
+  --grid-line: rgba(6, 182, 212, 0.04);
+  --glow-line-color: rgba(6, 182, 212, 0.4);
+  --hero-glow-1: rgba(6, 182, 212, 0.1);
+  --hero-glow-2: rgba(37, 99, 235, 0.1);
+  --section-tint: rgba(6, 182, 212, 0.02);
+  --cta-gradient-from: rgba(6, 182, 212, 0.1);
+  --cta-gradient-via: #0c1220;
+  --cta-gradient-to: rgba(37, 99, 235, 0.1);
+  --selection-bg: rgba(6, 182, 212, 0.3);
+  --selection-color: #ffffff;
+  --toggle-bg: rgba(255, 255, 255, 0.06);
+  --toggle-border: rgba(255, 255, 255, 0.12);
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-muted: var(--background-muted);
+  --color-background-alt: var(--background-alt);
+  --color-background-elevated: var(--background-elevated);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-accent: var(--accent);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-nav: var(--nav-bg);
+  --color-input: var(--input-bg);
+  --color-footer: var(--footer-bg);
+  --color-mockup: var(--mockup-bg);
+  --color-footer: var(--footer-bg);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-space-grotesk);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.font-heading {
+  font-family: var(--font-space-grotesk), system-ui, sans-serif;
+}
+
+/* ─── Background effects ─── */
+.grid-bg {
+  background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.grid-bg-sm {
+  background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.glow-line {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--glow-line-color),
+    transparent
+  );
+}
+
+.hero-glow-1 {
+  background: var(--hero-glow-1);
+}
+
+.hero-glow-2 {
+  background: var(--hero-glow-2);
+}
+
+.section-tint {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--section-tint),
+    transparent
+  );
+}
+
+/* ─── Reusable surfaces ─── */
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+.shadow-card-hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.shadow-accent {
+  box-shadow: var(--shadow-accent);
+}
+
+.shadow-mockup {
+  box-shadow: var(--shadow-mockup);
+}
+
+.surface-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.surface-card:hover {
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.surface-card-subtle {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+/* ─── Buttons ─── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  background: var(--accent);
+  color: var(--accent-foreground);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: var(--shadow-accent);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--foreground);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-border);
+  background: var(--background-muted);
+}
+
+/* ─── Forms ─── */
+.input-field {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background: var(--input-bg);
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  color: var(--foreground);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-field::placeholder {
+  color: var(--foreground-muted);
+}
+
+.input-field:focus {
+  border-color: var(--accent-border);
+  box-shadow: 0 0 0 3px var(--accent-muted);
+}
+
+/* ─── Badges ─── */
+.badge-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--accent-border);
+  background: var(--accent-muted);
+  padding: 0.375rem 1rem;
+}
+
+/* ─── Typography helpers ─── */
+.text-gradient-accent {
+  background: linear-gradient(
+    to right,
+    var(--accent),
+    var(--accent-secondary)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-color);
 }
