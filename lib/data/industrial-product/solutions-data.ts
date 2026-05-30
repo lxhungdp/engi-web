@@ -12,7 +12,7 @@ export const solutions: Solution[] = [
     title: "Infrastructure Inspection",
     problem:
       "Engineering teams need repeatable, high-quality inspection data across bridges, towers, and industrial assets.",
-    products: ["Smart Inspection Drone", "Robotic Inspection Rover", "Industrial IoT Sensor"],
+    products: ["Vertex Aero X2", "Robotic Inspection Rover", "Industrial IoT Sensor"],
     workflow: ["Plan mission", "Capture visual and sensor data", "Analyze defects", "Generate report"],
     output: ["Inspection images", "Thermal data", "Sensor trends", "CAD/GIS reports"],
     value: "Reduce manual inspection time and improve data consistency.",
@@ -23,7 +23,7 @@ export const solutions: Solution[] = [
     title: "Construction Monitoring",
     problem:
       "Project teams lack continuous visibility into site progress, safety, and equipment activity.",
-    products: ["Smart Inspection Drone", "LiDAR Mapping Unit", "AI Vision Camera"],
+    products: ["Vertex Aero X2", "LiDAR Mapping Unit", "AI Vision Camera"],
     workflow: ["Schedule captures", "Monitor site zones", "Track progress", "Share reports"],
     output: ["Progress maps", "Safety alerts", "As-built documentation"],
     value: "Keep stakeholders aligned with structured field data.",
@@ -45,7 +45,7 @@ export const solutions: Solution[] = [
     title: "Digital Twin & Mapping",
     problem:
       "Survey and engineering teams need accurate spatial data for BIM and digital twin workflows.",
-    products: ["LiDAR Mapping Unit", "Smart Inspection Drone"],
+    products: ["LiDAR Mapping Unit", "Vertex Aero X2"],
     workflow: ["Capture point clouds", "Register and process", "Export to BIM/GIS", "Maintain twin"],
     output: ["Point clouds", "BIM meshes", "Survey reports"],
     value: "Accelerate as-built documentation and design validation.",
@@ -67,7 +67,7 @@ export const solutions: Solution[] = [
     title: "Emergency Assessment",
     problem:
       "Response teams need rapid visual and sensor assessment in dynamic incident environments.",
-    products: ["Smart Inspection Drone", "Robotic Inspection Rover"],
+    products: ["Vertex Aero X2", "Robotic Inspection Rover"],
     workflow: ["Deploy rapidly", "Assess perimeter", "Stream intelligence", "Document findings"],
     output: ["Situation maps", "Live feeds", "Incident briefings"],
     value: "Support faster, safer emergency decision-making.",
@@ -80,7 +80,7 @@ export const featuredSolution: FeaturedSolution = {
   title: "Infrastructure Inspection",
   challenge:
     "Bridges, towers, pipelines, and industrial structures require frequent inspection — often in hard-to-reach or hazardous locations with inconsistent manual documentation.",
-  products: ["Smart Inspection Drone", "Robotic Inspection Rover", "Industrial IoT Sensor"],
+  products: ["Vertex Aero X2", "Robotic Inspection Rover", "Industrial IoT Sensor"],
   workflow: ["Scan", "Inspect", "Monitor", "Report"],
   outputs: [
     "Inspection images",

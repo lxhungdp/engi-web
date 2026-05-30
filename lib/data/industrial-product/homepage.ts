@@ -94,11 +94,11 @@ export const homepageWorkflow: WorkflowStep[] = [
 export const comparisonRows: ComparisonRow[] = [
   {
     productSlug: "smart-inspection-drone",
-    bestFor: "Aerial infrastructure inspection",
-    dataCaptured: "Visual, thermal, GPS imagery",
+    bestFor: "Aerial inspection and mapping (Aero Series)",
+    dataCaptured: "Visual, thermal, RTK-positioned imagery",
     mobilityType: "Aerial",
-    output: "Inspection reports, CAD/GIS export",
-    typicalUsers: "Inspection engineers",
+    output: "Inspection reports, orthomosaic, CAD/GIS export",
+    typicalUsers: "Engineering, construction, utilities teams",
   },
   {
     productSlug: "robotic-inspection-rover",

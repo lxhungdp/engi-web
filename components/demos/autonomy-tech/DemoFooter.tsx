@@ -18,10 +18,7 @@ export function DemoFooter() {
             SaaS-style multi-page website for robotics, AI, and autonomous
             technology companies.
           </p>
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 rounded-lg border border-accent/25 bg-accent/5 px-5 py-2.5 text-sm font-medium text-accent transition-all hover:border-accent/40 hover:bg-accent/10"
-          >
+          <Link href="/" className={cn(tc.btnSecondary, "inline-flex gap-2")}>
             <ArrowLeft className="h-4 w-4" />
             Back to EngiWeb
           </Link>

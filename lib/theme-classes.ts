@@ -1,4 +1,4 @@
-/** Shared theme-aware Tailwind class strings */
+/** Shared EngiWeb design system — theme-aware Tailwind class strings */
 export const tc = {
   page: "bg-background text-foreground transition-colors duration-300",
   heading: "font-heading text-foreground",
@@ -9,11 +9,13 @@ export const tc = {
   link: "text-sm text-foreground-muted transition-colors hover:text-foreground",
   linkAccent: "text-sm text-accent transition-colors hover:text-accent-hover",
 
-  card: "rounded-2xl border border-border bg-card shadow-card transition-all duration-300",
+  section: "py-20 lg:py-28",
+
+  card: "rounded-2xl border border-border bg-card shadow-card backdrop-blur-sm transition-all duration-300",
   cardHover:
     "hover:border-accent/30 hover:shadow-card-hover hover:bg-background-elevated",
   cardSubtle:
-    "rounded-xl border border-border bg-card backdrop-blur-sm transition-all duration-300",
+    "rounded-2xl border border-border bg-card backdrop-blur-sm transition-all duration-300",
 
   navScrolled: "border-b border-border bg-nav/90 backdrop-blur-xl",
   navMobile: "border-b border-border bg-nav/95 backdrop-blur-xl",
@@ -28,9 +30,9 @@ export const tc = {
   input: "input-field",
 
   iconBox:
-    "flex h-11 w-11 items-center justify-center rounded-lg bg-accent/10 text-accent ring-1 ring-accent/20 transition-all group-hover:bg-accent/15",
+    "flex h-11 w-11 items-center justify-center rounded-xl bg-accent/10 text-accent ring-1 ring-accent/20 transition-all group-hover:bg-accent/15",
   iconBoxSm:
-    "flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent ring-1 ring-accent/20",
+    "flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent ring-1 ring-accent/20",
 
   sectionAlt: "bg-background-muted",
   ctaPanel:

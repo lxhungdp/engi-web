@@ -1,29 +1,32 @@
 import type { Metadata } from "next";
-import { HomeHero } from "@/components/demos/industrial-product/HomeHero";
+import { DroneHero } from "@/components/demos/industrial-product/DroneHero";
 import {
   ComparisonPreviewSection,
-  IndustrialCTA,
+  DroneApplicationsSection,
+  DroneModelPreviewSection,
+  DroneWorkflowSection,
   IndustriesSection,
-  ProductOverviewSection,
-  UseCasesPreviewSection,
-  WorkflowSection,
-} from "@/components/demos/industrial-product/HomeSections";
+  IndustrialCTA,
+  ProductEcosystemSection,
+} from "@/components/demos/industrial-product/DroneHomeSections";
+import { aeroSeriesInfo } from "@/lib/data/industrial-product/drone-data";
 import { companyInfo } from "@/lib/data/industrial-product/site";
 
 export const metadata: Metadata = {
-  title: `${companyInfo.shortName} — Industrial Technology Products`,
-  description: companyInfo.positioning,
+  title: `${companyInfo.shortName} — ${aeroSeriesInfo.name}`,
+  description: aeroSeriesInfo.description,
 };
 
 export default function IndustrialProductHomePage() {
   return (
     <>
-      <HomeHero />
-      <ProductOverviewSection />
+      <DroneHero />
+      <ProductEcosystemSection />
+      <DroneModelPreviewSection />
       <IndustriesSection />
-      <UseCasesPreviewSection />
+      <DroneApplicationsSection />
       <ComparisonPreviewSection />
-      <WorkflowSection />
+      <DroneWorkflowSection />
       <IndustrialCTA />
     </>
   );

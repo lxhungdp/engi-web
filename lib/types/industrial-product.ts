@@ -1,9 +1,66 @@
 export type ProductCategory =
+  | "Drone Series"
   | "Aerial"
   | "Ground Robotics"
   | "Mapping"
   | "IoT Monitoring"
   | "AI Vision";
+
+export interface DroneModel {
+  slug: string;
+  name: string;
+  label: string;
+  bestFor: string[];
+  flightTime: string;
+  range: string;
+  camera: string;
+  thermal: string;
+  lidarReady: boolean;
+  positioning: string;
+  payload: string;
+  aiAnalytics: string;
+  output: string;
+  recommendedUsers: string;
+  highlighted?: boolean;
+  badge?: string;
+}
+
+export interface DroneApplication {
+  id: string;
+  title: string;
+  problem: string;
+  howItHelps: string;
+  typicalOutput: string;
+  icon: string;
+}
+
+export interface DronePayload {
+  id: string;
+  name: string;
+  purpose: string;
+  bestUseCase: string;
+  icon: string;
+}
+
+export interface DroneHighlight {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface DroneOutput {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface DroneRecommendation {
+  modelSlug: string;
+  title: string;
+  description: string;
+}
 
 export interface ProductSpec {
   label: string;
@@ -30,6 +87,8 @@ export interface IndustrialProduct {
   dataCaptured: string;
   bestFor: string;
   workflow: { step: number; title: string; description: string }[];
+  isDroneSeries?: boolean;
+  featured?: boolean;
 }
 
 export interface Industry {

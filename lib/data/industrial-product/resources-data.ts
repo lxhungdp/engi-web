@@ -10,10 +10,10 @@ export const resources: Resource[] = [
   {
     id: "drone-sheet",
     type: "Product Sheet",
-    title: "Product Sheet: Smart Inspection Drone",
+    title: "Product Sheet: Vertex Aero X2",
     description:
       "Specifications, payload options, and deployment overview for aerial inspection missions.",
-    relatedProduct: "Smart Inspection Drone",
+    relatedProduct: "Vertex Aero X2",
     readTime: "5 min read",
     icon: "FileText",
   },

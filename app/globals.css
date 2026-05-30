@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
-/* ─── Light theme (default) ─── */
+/* ─── EngiWeb global design tokens ─── */
+
+/* Light theme */
 :root {
   --background: #f8fafc;
   --background-muted: #f1f5f9;
@@ -9,12 +11,13 @@
   --foreground: #0f172a;
   --foreground-secondary: #475569;
   --foreground-muted: #64748b;
-  --accent: #0ea5e9;
-  --accent-secondary: #2563eb;
-  --accent-hover: #0284c7;
+  --accent: #2563eb;
+  --accent-secondary: #0ea5e9;
+  --accent-cyan: #06b6d4;
+  --accent-hover: #1d4ed8;
   --accent-foreground: #ffffff;
-  --accent-muted: rgba(14, 165, 233, 0.08);
-  --accent-border: rgba(14, 165, 233, 0.28);
+  --accent-muted: rgba(37, 99, 235, 0.08);
+  --accent-border: rgba(37, 99, 235, 0.28);
   --border: #e2e8f0;
   --border-subtle: rgba(148, 163, 184, 0.35);
   --card: #ffffff;
@@ -25,66 +28,81 @@
   --mockup-bg: #ffffff;
   --mockup-border: #e2e8f0;
   --mockup-inner: #f8fafc;
+  --btn-secondary-bg: #ffffff;
+  --btn-secondary-border: #e2e8f0;
+  --btn-secondary-hover-bg: #f1f5f9;
+  --btn-primary-bg: #0ea5e9;
+  --btn-primary-hover-bg: #0284c7;
+  --btn-primary-foreground: #ffffff;
+  --btn-primary-shadow: 0 4px 14px -2px rgb(14 165 233 / 0.35);
   --shadow-card: 0 1px 3px 0 rgb(15 23 42 / 0.06),
     0 4px 12px -2px rgb(15 23 42 / 0.05);
   --shadow-card-hover: 0 8px 24px -6px rgb(15 23 42 / 0.1);
-  --shadow-accent: 0 4px 14px -2px rgb(14 165 233 / 0.35);
+  --shadow-accent: 0 4px 14px -2px rgb(37 99 235 / 0.35);
   --shadow-mockup: 0 20px 50px -12px rgb(15 23 42 / 0.12);
-  --grid-line: rgba(14, 165, 233, 0.07);
-  --glow-line-color: rgba(14, 165, 233, 0.18);
-  --hero-glow-1: rgba(14, 165, 233, 0.09);
-  --hero-glow-2: rgba(37, 99, 235, 0.06);
-  --section-tint: rgba(14, 165, 233, 0.03);
-  --cta-gradient-from: rgba(14, 165, 233, 0.08);
+  --grid-line: rgba(37, 99, 235, 0.07);
+  --glow-line-color: rgba(37, 99, 235, 0.18);
+  --hero-glow-1: rgba(37, 99, 235, 0.09);
+  --hero-glow-2: rgba(6, 182, 212, 0.06);
+  --section-tint: rgba(37, 99, 235, 0.03);
+  --cta-gradient-from: rgba(37, 99, 235, 0.08);
   --cta-gradient-via: #f1f5f9;
-  --cta-gradient-to: rgba(37, 99, 235, 0.06);
-  --selection-bg: rgba(14, 165, 233, 0.2);
+  --cta-gradient-to: rgba(6, 182, 212, 0.06);
+  --selection-bg: rgba(37, 99, 235, 0.2);
   --selection-color: #0f172a;
   --toggle-bg: #f1f5f9;
   --toggle-border: #e2e8f0;
 }
 
-/* ─── Dark theme ─── */
+/* Dark theme */
 .dark {
-  --background: #060b14;
-  --background-muted: #0c1220;
-  --background-alt: #0a1020;
-  --background-elevated: #0c1220;
-  --foreground: #f4f4f5;
-  --foreground-secondary: #a1a1aa;
-  --foreground-muted: #71717a;
-  --accent: #06b6d4;
-  --accent-secondary: #3b82f6;
-  --accent-hover: #22d3ee;
-  --accent-foreground: #060b14;
-  --accent-muted: rgba(6, 182, 212, 0.08);
-  --accent-border: rgba(6, 182, 212, 0.25);
-  --border: rgba(255, 255, 255, 0.1);
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --card: rgba(255, 255, 255, 0.03);
-  --card-hover: rgba(255, 255, 255, 0.05);
-  --nav-bg: rgba(6, 11, 20, 0.88);
-  --input-bg: rgba(255, 255, 255, 0.05);
-  --footer-bg: #040810;
-  --mockup-bg: rgba(12, 18, 32, 0.85);
-  --mockup-border: rgba(255, 255, 255, 0.1);
-  --mockup-inner: rgba(255, 255, 255, 0.03);
+  --background: #020617;
+  --background-muted: #0f172a;
+  --background-alt: #050816;
+  --background-elevated: #0f172a;
+  --foreground: #f8fafc;
+  --foreground-secondary: #cbd5e1;
+  --foreground-muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-secondary: #22d3ee;
+  --accent-cyan: #22d3ee;
+  --accent-hover: #7dd3fc;
+  --accent-foreground: #ffffff;
+  --accent-muted: rgba(56, 189, 248, 0.1);
+  --accent-border: rgba(148, 163, 184, 0.25);
+  --border: rgba(148, 163, 184, 0.25);
+  --border-subtle: rgba(148, 163, 184, 0.15);
+  --card: rgba(15, 23, 42, 0.75);
+  --card-hover: rgba(15, 23, 42, 0.85);
+  --nav-bg: rgba(2, 6, 23, 0.88);
+  --input-bg: rgba(15, 23, 42, 0.6);
+  --footer-bg: #020617;
+  --mockup-bg: rgba(15, 23, 42, 0.85);
+  --mockup-border: rgba(148, 163, 184, 0.25);
+  --mockup-inner: rgba(15, 23, 42, 0.5);
+  --btn-secondary-bg: rgba(15, 23, 42, 0.6);
+  --btn-secondary-border: rgba(148, 163, 184, 0.25);
+  --btn-secondary-hover-bg: rgba(30, 41, 59, 0.8);
+  --btn-primary-bg: #06b6d4;
+  --btn-primary-hover-bg: #22d3ee;
+  --btn-primary-foreground: #060b14;
+  --btn-primary-shadow: 0 4px 14px -2px rgba(6, 182, 212, 0.35);
   --shadow-card: none;
-  --shadow-card-hover: 0 8px 30px -8px rgba(6, 182, 212, 0.12);
-  --shadow-accent: 0 4px 14px -2px rgba(6, 182, 212, 0.35);
-  --shadow-mockup: 0 20px 50px -12px rgba(6, 182, 212, 0.08);
-  --grid-line: rgba(6, 182, 212, 0.04);
-  --glow-line-color: rgba(6, 182, 212, 0.4);
-  --hero-glow-1: rgba(6, 182, 212, 0.1);
-  --hero-glow-2: rgba(37, 99, 235, 0.1);
-  --section-tint: rgba(6, 182, 212, 0.02);
-  --cta-gradient-from: rgba(6, 182, 212, 0.1);
-  --cta-gradient-via: #0c1220;
-  --cta-gradient-to: rgba(37, 99, 235, 0.1);
-  --selection-bg: rgba(6, 182, 212, 0.3);
+  --shadow-card-hover: 0 8px 30px -8px rgba(56, 189, 248, 0.12);
+  --shadow-accent: 0 4px 14px -2px rgba(56, 189, 248, 0.35);
+  --shadow-mockup: 0 20px 50px -12px rgba(56, 189, 248, 0.08);
+  --grid-line: rgba(56, 189, 248, 0.05);
+  --glow-line-color: rgba(56, 189, 248, 0.35);
+  --hero-glow-1: rgba(56, 189, 248, 0.1);
+  --hero-glow-2: rgba(59, 130, 246, 0.08);
+  --section-tint: rgba(56, 189, 248, 0.02);
+  --cta-gradient-from: rgba(56, 189, 248, 0.1);
+  --cta-gradient-via: #0f172a;
+  --cta-gradient-to: rgba(59, 130, 246, 0.1);
+  --selection-bg: rgba(56, 189, 248, 0.3);
   --selection-color: #ffffff;
-  --toggle-bg: rgba(255, 255, 255, 0.06);
-  --toggle-border: rgba(255, 255, 255, 0.12);
+  --toggle-bg: rgba(15, 23, 42, 0.6);
+  --toggle-border: rgba(148, 163, 184, 0.25);
 }
 
 @theme inline {
@@ -105,7 +123,6 @@
   --color-input: var(--input-bg);
   --color-footer: var(--footer-bg);
   --color-mockup: var(--mockup-bg);
-  --color-footer: var(--footer-bg);
   --font-sans: var(--font-inter);
   --font-heading: var(--font-space-grotesk);
 }
@@ -141,6 +158,12 @@ body {
   background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 48px 48px;
+}
+
+.blueprint-lines {
+  background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
 .glow-line {
@@ -207,15 +230,16 @@ body {
   transition: border-color 0.25s ease, background-color 0.25s ease;
 }
 
-/* ─── Buttons ─── */
+/* ─── Buttons (shared across all demos) ─── */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   border-radius: 0.5rem;
-  background: var(--accent);
-  color: var(--accent-foreground);
+  border: none;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-foreground);
   padding: 0.75rem 1.5rem;
   font-size: 0.875rem;
   font-weight: 600;
@@ -223,8 +247,8 @@ body {
 }
 
 .btn-primary:hover {
-  background: var(--accent-hover);
-  box-shadow: var(--shadow-accent);
+  background: var(--btn-primary-hover-bg);
+  box-shadow: var(--btn-primary-shadow);
 }
 
 .btn-secondary {
@@ -233,8 +257,8 @@ body {
   justify-content: center;
   gap: 0.5rem;
   border-radius: 0.5rem;
-  border: 1px solid var(--border);
-  background: var(--card);
+  border: 1px solid var(--btn-secondary-border);
+  background: var(--btn-secondary-bg);
   color: var(--foreground);
   padding: 0.75rem 1.5rem;
   font-size: 0.875rem;
@@ -244,7 +268,7 @@ body {
 
 .btn-secondary:hover {
   border-color: var(--accent-border);
-  background: var(--background-muted);
+  background: var(--btn-secondary-hover-bg);
 }
 
 /* ─── Forms ─── */
@@ -290,6 +314,42 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.molecule-pattern {
+  background-image: radial-gradient(
+      circle at 15% 20%,
+      rgba(6, 182, 212, 0.06) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(34, 197, 94, 0.04) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(37, 99, 235, 0.04) 0%,
+      transparent 55%
+    );
+}
+
+.dark .molecule-pattern {
+  background-image: radial-gradient(
+      circle at 15% 20%,
+      rgba(56, 189, 248, 0.08) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(34, 197, 94, 0.05) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(59, 130, 246, 0.06) 0%,
+      transparent 55%
+    );
 }
 
 ::selection {

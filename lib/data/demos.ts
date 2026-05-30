@@ -10,25 +10,20 @@ export const demos: Demo[] = [
     href: "/demos/autonomy-tech",
   },
   {
-    id: "bridge-engineering",
-    title: "Bridge Engineering Company",
+    id: "construction-engineering",
+    title: "Construction Engineering Company",
     description:
-      "For civil engineering and construction firms with technical credibility.",
+      "For construction, civil engineering, infrastructure, and project delivery companies with a professional corporate website style.",
     styleTag: "Engineering Mode",
-  },
-  {
-    id: "cad-software",
-    title: "CAD / Engineering Software",
-    description:
-      "For engineering software tools, dashboards, and calculation platforms.",
-    styleTag: "Product Mode",
+    href: "/demos/construction-engineering",
   },
   {
     id: "biotech-research",
     title: "BioTech Research Website",
     description:
-      "For biotech, diagnostics, laboratory, and medical technology companies.",
+      "For biotech companies, diagnostic labs, research groups, medical technology startups, and life science organizations with a clean scientific website style.",
     styleTag: "BioTech Mode",
+    href: "/demos/biotech-research",
   },
   {
     id: "industrial-product",

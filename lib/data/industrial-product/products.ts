@@ -3,18 +3,18 @@ import type { IndustrialProduct } from "@/lib/types/industrial-product";
 export const products: IndustrialProduct[] = [
   {
     slug: "smart-inspection-drone",
-    name: "Smart Inspection Drone",
-    category: "Aerial",
-    tagline: "Autonomous aerial inspection for critical infrastructure.",
+    name: "Vertex Aero Series",
+    category: "Drone Series",
+    tagline: "Industrial drones for inspection, mapping, and field intelligence.",
     shortDescription:
-      "Autonomous drone system for bridge inspection, tower inspection, construction monitoring, and emergency site assessment.",
+      "Three drone models — Aero S1, Aero X2, and Aero M3 — for visual inspection, thermal missions, RTK mapping, and engineering-ready data export.",
     longDescription:
-      "The Vertex Smart Inspection Drone combines autonomous flight planning, high-resolution visual capture, and optional thermal payloads to deliver repeatable inspection missions across bridges, towers, energy assets, and construction sites. RTK positioning and AI defect detection help engineering teams capture CAD/GIS-ready data with consistent quality.",
+      "The Vertex Aero Series is a professional drone product line built for engineering, construction, energy, and public safety teams. From compact site documentation with the Aero S1 to heavy-duty LiDAR mapping with the Aero M3, the flagship Aero X2 delivers balanced performance for infrastructure inspection, thermal analysis, and CAD/GIS workflows.",
     features: [
-      "Autonomous flight missions",
-      "8K visual inspection camera",
+      "Three models: S1, X2, M3",
+      "8K visual inspection (X2/M3)",
       "Optional thermal payload",
-      "RTK positioning",
+      "RTK / GNSS positioning",
       "AI defect detection",
       "CAD/GIS-ready data export",
     ],
@@ -22,38 +22,42 @@ export const products: IndustrialProduct[] = [
       "Bridge inspection",
       "Construction monitoring",
       "Energy and utilities",
+      "LiDAR mapping and digital twins",
       "Emergency response",
     ],
     specifications: [
-      { label: "Operating mode", value: "Manual, assisted, autonomous" },
-      { label: "Data captured", value: "Visual, thermal, GPS-tagged imagery" },
-      { label: "Connectivity", value: "WiFi, LTE, optional mesh link" },
-      { label: "Power", value: "Hot-swappable battery packs" },
-      { label: "Environmental rating", value: "IP54, wind resistance Level 6" },
-      { label: "Output format", value: "JPEG, TIFF, orthomosaic, CAD/GIS export" },
-      { label: "Integration", value: "REST API, cloud sync, GIS platforms" },
-      { label: "Typical deployment", value: "Field kit with ground station" },
+      { label: "Product line", value: "Vertex Aero S1, X2, M3" },
+      { label: "Flagship model", value: "Vertex Aero X2" },
+      { label: "Flight time", value: "Up to 55 minutes (M3)" },
+      { label: "Camera", value: "4K to 8K visual + thermal options" },
+      { label: "Positioning", value: "GNSS, RTK, PPK" },
+      { label: "Payload", value: "Fixed to multi-payload support" },
+      { label: "AI analytics", value: "Basic to advanced defect detection" },
+      { label: "Output format", value: "Inspection reports, orthomosaic, point cloud, CAD/GIS" },
     ],
     outputs: [
-      "Inspection image sets",
+      "Inspection image reports",
       "Thermal anomaly maps",
-      "Geo-referenced reports",
-      "CAD/GIS-ready exports",
+      "Orthomosaic maps",
+      "3D point clouds",
+      "CAD/BIM/GIS-ready exports",
     ],
     relatedProducts: ["lidar-mapping-unit", "industrial-iot-sensor", "ai-vision-camera"],
-    keySpecs: ["8K camera", "RTK positioning", "45 min flight"],
+    keySpecs: ["3 drone models", "RTK mapping", "AI defect detection"],
     visualType: "drone",
     icon: "Plane",
     mobilityType: "Aerial",
-    typicalUsers: "Inspection engineers, asset managers",
-    dataCaptured: "Visual, thermal, GPS imagery",
-    bestFor: "Infrastructure and aerial inspection",
+    typicalUsers: "Engineering, construction, utilities, public safety",
+    dataCaptured: "Visual, thermal, RTK-positioned imagery",
+    bestFor: "Infrastructure inspection and aerial mapping",
     workflow: [
-      { step: 1, title: "Plan", description: "Define mission boundary, altitude, and capture requirements." },
-      { step: 2, title: "Fly", description: "Execute autonomous flight with real-time monitoring." },
-      { step: 3, title: "Analyze", description: "Run AI defect detection and annotate findings." },
-      { step: 4, title: "Deliver", description: "Export reports and CAD/GIS-ready data packages." },
+      { step: 1, title: "Plan", description: "Define flight area, target, altitude, and output requirements." },
+      { step: 2, title: "Capture", description: "Collect aerial imagery, thermal data, and RTK positions." },
+      { step: 3, title: "Analyze", description: "Run AI-assisted defect and anomaly review." },
+      { step: 4, title: "Deliver", description: "Export reports, maps, and CAD/GIS-ready data packages." },
     ],
+    isDroneSeries: true,
+    featured: true,
   },
   {
     slug: "robotic-inspection-rover",
@@ -280,6 +284,17 @@ export function getProductBySlug(slug: string): IndustrialProduct | undefined {
 export function getProductsByCategory(
   category: string,
 ): IndustrialProduct[] {
-  if (category === "All") return products;
+  if (category === "All") {
+    const drone = products.find((p) => p.isDroneSeries);
+    const rest = products.filter((p) => !p.isDroneSeries);
+    return drone ? [drone, ...rest] : products;
+  }
+  if (category === "Drone Series") {
+    return products.filter((p) => p.isDroneSeries);
+  }
   return products.filter((p) => p.category === category);
+}
+
+export function isDroneSeriesCategory(category: string): boolean {
+  return category === "Drone Series";
 }
