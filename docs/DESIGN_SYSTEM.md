@@ -15,37 +15,44 @@ Loaded in `app/layout.tsx` via `next/font/google`.
 
 **Rule:** All headings use `font-heading`. Body text uses default sans.
 
+**Tracking:** Headings use tight tracking (`-0.022em` via `.font-heading`); body uses `-0.011em` (set on `body`). This is the Linear/Vercel tight-typography look. Use `tc.headingXl` / `tc.headingLg` / `tc.headingMd` for the type scale rather than ad-hoc sizes.
+
 ## Color system (CSS variables)
 
 Defined in `app/globals.css` under `:root` (light) and `.dark` (dark).
 
-### Light theme
+Aesthetic: **Linear / Vercel minimal** — neutral palette, hairline borders, one blue/cyan accent. Light and dark are each designed as complete systems, not inversions.
+
+### Light theme (crisp white + neutral grays)
 
 | Token | Value | Usage |
 |-------|-------|-------|
-| `--background` | `#f8fafc` | Page background |
-| `--background-muted` | `#f1f5f9` | Alternate sections |
+| `--background` | `#ffffff` | Page background |
+| `--background-muted` | `#fafafa` | Alternate sections |
 | `--background-elevated` | `#ffffff` | Elevated surfaces |
-| `--foreground` | `#0f172a` | Primary text |
-| `--foreground-secondary` | `#475569` | Secondary text |
-| `--foreground-muted` | `#64748b` | Muted text |
+| `--foreground` | `#0a0a0a` | Primary text (near-black) |
+| `--foreground-secondary` | `#404040` | Secondary text |
+| `--foreground-muted` | `#6b7280` | Muted text |
 | `--accent` | `#2563eb` | Links, badges, highlights |
 | `--accent-secondary` | `#0ea5e9` | Gradient text secondary |
 | `--accent-hover` | `#1d4ed8` | Accent hover |
-| `--border` | `#e2e8f0` | Borders |
+| `--border` | `#ededee` | Hairline borders |
 | `--card` | `#ffffff` | Card backgrounds |
 
-### Dark theme
+### Dark theme (neutral near-black + soft grays)
 
 | Token | Value | Usage |
 |-------|-------|-------|
-| `--background` | `#020617` | Page background |
-| `--background-muted` | `#0f172a` | Alternate sections |
-| `--foreground` | `#f8fafc` | Primary text |
+| `--background` | `#08090a` | Page background (neutral near-black) |
+| `--background-muted` | `#0e0f11` | Alternate sections |
+| `--background-elevated` | `#111214` | Elevated surfaces |
+| `--foreground` | `#f7f8f8` | Primary text |
+| `--foreground-secondary` | `#b4b9c1` | Secondary text |
+| `--foreground-muted` | `#8a8f98` | Muted text |
 | `--accent` | `#38bdf8` | Links, badges, highlights |
 | `--accent-secondary` | `#22d3ee` | Secondary accent |
-| `--border` | `rgba(148,163,184,0.25)` | Borders |
-| `--card` | `rgba(15,23,42,0.75)` | Card backgrounds |
+| `--border` | `rgba(255,255,255,0.08)` | Hairline borders |
+| `--card` | `rgba(255,255,255,0.02)` | Card backgrounds |
 
 ### Primary buttons (separate from accent)
 
