@@ -67,7 +67,7 @@ function BioTechHeroVisual() {
 
 export function BioTechHero() {
   return (
-    <section className="relative overflow-hidden pt-28 pb-16 lg:pt-36 lg:pb-24">
+    <section className={tc.homeHero}>
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <div className={cn("mb-5", tc.badge)}>

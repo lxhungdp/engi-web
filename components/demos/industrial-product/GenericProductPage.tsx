@@ -17,7 +17,7 @@ export function GenericProductPage({ product }: { product: IndustrialProduct }) 
 
   return (
     <>
-      <section className="relative pt-28 pb-12 lg:pt-36 lg:pb-16">
+      <section className={tc.pageHero}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>

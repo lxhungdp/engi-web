@@ -1,9 +1,9 @@
-import { IndustrialDemoNavbar } from "@/components/demos/industrial-product/IndustrialDemoNavbar";
-import { IndustrialDemoFooter } from "@/components/demos/industrial-product/IndustrialDemoFooter";
+import { DemoNavbar } from "@/components/demos/product-launch/DemoNavbar";
+import { DemoFooter } from "@/components/demos/product-launch/DemoFooter";
 import { tc } from "@/lib/theme-classes";
 import { cn } from "@/lib/utils";
 
-export default function IndustrialProductLayout({
+export default function ProductLaunchLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -12,9 +12,9 @@ export default function IndustrialProductLayout({
     <>
       <div className="pointer-events-none fixed inset-0 grid-bg-sm" />
       <div className="pointer-events-none fixed top-0 inset-x-0 h-px glow-line" />
-      <IndustrialDemoNavbar />
+      <DemoNavbar />
       <main className={cn("relative min-h-screen", tc.page, tc.demoMain)}>{children}</main>
-      <IndustrialDemoFooter />
+      <DemoFooter />
     </>
   );
 }

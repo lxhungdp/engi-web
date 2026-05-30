@@ -3,7 +3,6 @@ import Link from "next/link";
 import { PageHero, SectionHeading } from "@/components/demos/biotech-research/SectionHeading";
 import { ResearchAreaCard } from "@/components/demos/biotech-research/ResearchAreaCard";
 import { WorkflowTimeline } from "@/components/demos/biotech-research/WorkflowTimeline";
-import { BiotechCTA } from "@/components/demos/biotech-research/BiotechCTA";
 import {
   featuredResearchProgram,
   researchAreas,

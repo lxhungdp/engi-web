@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 
 export function DroneHero() {
   return (
-    <section className="relative overflow-hidden pt-28 pb-16 lg:pt-36 lg:pb-24">
+    <section className={tc.homeHero}>
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute top-0 left-1/2 h-[600px] w-[900px] -translate-x-1/2 rounded-full hero-glow-1 blur-[120px]" />
         <div

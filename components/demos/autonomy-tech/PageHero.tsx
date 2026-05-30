@@ -12,7 +12,7 @@ interface PageHeroProps {
 
 export function PageHero({ eyebrow, title, description, className }: PageHeroProps) {
   return (
-    <section className={cn("relative pt-28 pb-12 lg:pt-36 lg:pb-16", className)}>
+    <section className={cn(tc.pageHero, className)}>
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute top-0 left-1/2 h-[400px] w-[700px] -translate-x-1/2 rounded-full hero-glow-1 blur-[100px]" />
       </div>

@@ -28,7 +28,7 @@ import { cn } from "@/lib/utils";
 export function AeroX2ProductPage() {
   return (
     <>
-      <section className="relative overflow-hidden pt-28 pb-12 lg:pt-36 lg:pb-20">
+      <section className={cn(tc.pageHero, "overflow-hidden")}>
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute top-0 right-0 h-[500px] w-[600px] rounded-full hero-glow-1 blur-[100px]" />
         </div>

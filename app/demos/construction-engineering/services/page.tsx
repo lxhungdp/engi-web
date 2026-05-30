@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/demos/construction-engineering/SectionHeading";
 import { ServiceCard } from "@/components/demos/construction-engineering/ServiceCard";
 import { ProcessTimeline } from "@/components/demos/construction-engineering/ProcessTimeline";
-import { ConstructionCTA } from "@/components/demos/construction-engineering/ConstructionCTA";
 import {
   constructionServices,
   serviceWorkflow,

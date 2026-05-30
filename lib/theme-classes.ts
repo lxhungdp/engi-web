@@ -11,6 +11,13 @@ export const tc = {
 
   section: "py-20 lg:py-28",
 
+  /** Clears fixed demo navbar (h-16) — use on demo layout `<main>` */
+  demoMain: "pt-16",
+  /** Inner page hero — additional spacing below demoMain */
+  pageHero: "relative pt-8 pb-12 lg:pt-12 lg:pb-16",
+  /** Demo homepage hero — additional spacing below demoMain */
+  homeHero: "relative overflow-hidden pt-8 pb-16 lg:pt-12 lg:pb-24",
+
   card: "rounded-2xl border border-border bg-card shadow-card backdrop-blur-sm transition-all duration-300",
   cardHover:
     "hover:border-accent/30 hover:shadow-card-hover hover:bg-background-elevated",
