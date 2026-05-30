@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { companyInfo, navLinks, companyRoutes } from "@/lib/data/company/site";
+import { CompanyLogo } from "@/components/CompanyLogo";
+import { navLinks, companyRoutes } from "@/lib/data/company/site";
 import { tc } from "@/lib/theme-classes";
 import { cn } from "@/lib/utils";
 
@@ -27,16 +27,7 @@ export function MainNavbar() {
       )}
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href={companyRoutes.home} className="group flex items-center">
-          <Image
-            src={companyInfo.logo}
-            alt={companyInfo.shortName}
-            width={80}
-            height={72}
-            className="h-10 w-auto object-contain"
-            priority
-          />
-        </Link>
+        <CompanyLogo className="h-10 w-auto object-contain" priority />
 
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { companyInfo, companyRoutes } from "@/lib/data/company/site";
+import { CompanyLogo } from "@/components/CompanyLogo";
 import { tc } from "@/lib/theme-classes";
 import { cn } from "@/lib/utils";
 
@@ -19,15 +19,7 @@ export function MainFooter() {
     <footer className="border-t border-border bg-footer">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:gap-12">
-          <Link href={companyRoutes.home} className="shrink-0">
-            <Image
-              src={companyInfo.logo}
-              alt={companyInfo.name}
-              width={80}
-              height={72}
-              className="h-14 w-auto object-contain"
-            />
-          </Link>
+          <CompanyLogo className="h-14 w-auto object-contain" />
 
           <ul className="space-y-3 text-sm">
             {footerContact.map((item) => (
