@@ -187,5 +187,6 @@ tc.ctaPanel      // gradient CTA panel
 
 ## Related docs
 
+- [STYLE_REFERENCE.md](./STYLE_REFERENCE.md) — portable copy-paste spec for other websites
 - [THEME_RULES.md](./THEME_RULES.md)
 - [COMPONENT_RULES.md](./COMPONENT_RULES.md)

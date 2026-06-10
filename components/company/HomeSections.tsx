@@ -5,14 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { companyInfo, companyRoutes } from "@/lib/data/company/site";
 import {
+  companyInfo,
+  companyRoutes,
   heroSlides,
   partners,
   products,
   solutions,
   supportItems,
-} from "@/lib/data/companyContent";
+} from "@/lib/adapters/company";
 import { ProductCard } from "@/components/company/ProductCard";
 import { SolutionCard } from "@/components/company/SolutionCard";
 import { SupportCard } from "@/components/company/SupportCard";

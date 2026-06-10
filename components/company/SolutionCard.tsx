@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import type { CompanySolution } from "@/lib/types/company";
-import { getDemoIcon } from "@/lib/demo-icons";
+import { getCompanyIcon } from "@/lib/company-icons";
 import { tc } from "@/lib/theme-classes";
 import { cn } from "@/lib/utils";
 
@@ -13,7 +13,7 @@ export function SolutionCard({
   solution: CompanySolution;
   compact?: boolean;
 }) {
-  const Icon = getDemoIcon(solution.icon);
+  const Icon = getCompanyIcon(solution.icon);
 
   if (compact && solution.image) {
     return (

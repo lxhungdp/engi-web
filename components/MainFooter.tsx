@@ -41,8 +41,8 @@ export function MainFooter() {
 
         <div className="mt-10 flex flex-col items-start justify-between gap-4 border-t border-border pt-6 sm:flex-row sm:items-center">
           <p className="text-xs text-foreground-muted">{companyInfo.copyright}</p>
-          <Link href={companyRoutes.contact} className="text-xs text-foreground-muted hover:text-foreground">
-            privacy policy
+          <Link href={companyRoutes.privacy} className="text-xs text-foreground-muted hover:text-foreground">
+            Privacy Policy
           </Link>
         </div>
       </div>

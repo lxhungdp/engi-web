@@ -6,6 +6,8 @@ export const companyRoutes = {
   support: "/support",
   contact: "/contact",
   news: "/news",
+  newsDetail: (slug: string) => `/news/${slug}` as const,
+  privacy: "/privacy",
 } as const;
 
 export const companyInfo = {

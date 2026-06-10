@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { siteMetadata } from "@/lib/metadata";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,9 +15,12 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "ARGOSDYNE — INNOVATING DRONE TECHNOLOGY",
-  description:
-    "ARGOSDYNE, an autonomous flying drone control solution company. Self-developed drone self-flight & Unmanned Operating System.",
+  metadataBase: new URL(siteMetadata.url),
+  title: {
+    default: siteMetadata.title,
+    template: `%s`,
+  },
+  description: siteMetadata.description,
   keywords: [
     "ARGOSDYNE",
     "AQUILA-2",
@@ -28,6 +32,14 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: "/favicon.png",
+  },
+  openGraph: {
+    siteName: siteMetadata.name,
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 

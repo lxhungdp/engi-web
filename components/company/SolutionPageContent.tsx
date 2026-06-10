@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { solutions } from "@/lib/data/companyContent";
+import { solutions } from "@/lib/adapters/company";
 import { YouTubeEmbed } from "@/components/company/YouTubeEmbed";
 import { CTASection } from "@/components/company/CTASection";
 import { PageHero } from "@/components/ui/SectionHeading";
-import { getDemoIcon } from "@/lib/demo-icons";
+import { getCompanyIcon } from "@/lib/company-icons";
 import { tc } from "@/lib/theme-classes";
 import { cn } from "@/lib/utils";
 
@@ -21,7 +21,7 @@ export function SolutionPageContent() {
 
       <div className="pb-20">
         {solutions.map((solution, index) => {
-          const Icon = getDemoIcon(solution.icon);
+          const Icon = getCompanyIcon(solution.icon);
           return (
             <section
               key={solution.slug}

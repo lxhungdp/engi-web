@@ -419,65 +419,106 @@ export const partners: PartnerLogo[] = Array.from({ length: 18 }, (_, i) => ({
 export const newsItems: NewsItem[] = [
   {
     id: "341",
+    slug: "excellent-corporate-research-center-ministry-science-ict",
     date: "2024-06-24",
     category: "NEWS",
-    title: "ARGOSDYNE, designated as an excellent corporate research center by the Ministry of Science and ICT",
+    title:
+      "ARGOSDYNE, designated as an excellent corporate research center by the Ministry of Science and ICT",
+    excerpt:
+      "ARGOSDYNE has been recognized as an excellent corporate research center by Korea's Ministry of Science and ICT.",
+    body: "ARGOSDYNE has been designated as an excellent corporate research center by the Ministry of Science and ICT, recognizing the company's continued investment in autonomous drone technology and unmanned operating systems.",
     image: "/images/news/980872.png",
   },
   {
     id: "340",
+    slug: "top-100-startups-material-managers",
     date: "2024-06-24",
     category: "NEWS",
-    title: "ARGOSDYNE, selected as one of the top 100 startups for material managers (materials, parts, equipment)",
+    title:
+      "ARGOSDYNE, selected as one of the top 100 startups for material managers (materials, parts, equipment)",
+    excerpt:
+      "ARGOSDYNE was selected among the top 100 startups for materials, parts, and equipment.",
+    body: "ARGOSDYNE was selected as one of the top 100 startups for material managers, covering materials, parts, and equipment — highlighting the company's role in Korea's advanced manufacturing and drone supply ecosystem.",
     image: "/images/news/496010.png",
   },
   {
     id: "339",
+    slug: "cactus-distribution-visits-argosdyne",
     date: "2024-06-24",
     category: "NEWS",
     title: "Cactus Distribution visits ARGOSDYNE",
+    excerpt: "Cactus Distribution visited ARGOSDYNE to explore partnership opportunities.",
+    body: "Cactus Distribution visited ARGOSDYNE headquarters to discuss distribution partnerships and autonomous drone solutions for international markets.",
     image: "/images/news/184282.png",
   },
   {
     id: "338",
+    slug: "secures-9-million-drone-export-contract",
     date: "2024-06-24",
     category: "NEWS",
-    title: "ARGOSDYNE, Secures $9 Million Drone Export Contract to North and South America",
+    title:
+      "ARGOSDYNE, Secures $9 Million Drone Export Contract to North and South America",
+    excerpt:
+      "ARGOSDYNE secured a $9 million drone export contract covering North and South America.",
+    body: "ARGOSDYNE secured a $9 million drone export contract to North and South America, expanding the global reach of its AQUILA drone platforms and autonomous operating solutions.",
     image: "/images/news/643069.png",
   },
   {
     id: "337",
+    slug: "appears-in-silver-lining-documentary",
     date: "2024-06-24",
     category: "NEWS",
-    title: "ARGOSDYNE, appears in 'Silver Lining', a documentary about startups' overseas expansion",
+    title:
+      "ARGOSDYNE, appears in 'Silver Lining', a documentary about startups' overseas expansion",
+    excerpt:
+      "ARGOSDYNE is featured in the documentary 'Silver Lining' about startup overseas expansion.",
+    body: "ARGOSDYNE appears in 'Silver Lining', a documentary showcasing how Korean startups expand overseas, featuring the company's autonomous drone technology and global growth strategy.",
     image: "/images/news/191828.png",
   },
   {
     id: "336",
+    slug: "luncheon-meeting-president-korean-american-startups",
     date: "2024-06-24",
     category: "NEWS",
-    title: "ARGOSDYNE holds a luncheon and meeting with the President along with participating Korean and American startup companies",
+    title:
+      "ARGOSDYNE holds a luncheon and meeting with the President along with participating Korean and American startup companies",
+    excerpt:
+      "ARGOSDYNE joined Korean and American startups for a luncheon and meeting with the President.",
+    body: "ARGOSDYNE participated in a luncheon and meeting with the President alongside Korean and American startup companies, discussing innovation in autonomous systems and international collaboration.",
     image: "/images/news/80472.jpg",
   },
   {
     id: "335",
+    slug: "participates-in-intergeo-2022-essen-germany",
     date: "2024-06-24",
     category: "NEWS",
     title: "ARGOSDYNE, participates in INTERGEO 2022 held in Essen, Germany",
+    excerpt: "ARGOSDYNE showcased mapping and surveying solutions at INTERGEO 2022 in Essen.",
+    body: "ARGOSDYNE participated in INTERGEO 2022 in Essen, Germany, presenting aerial surveying and mapping solutions powered by its drone platforms and ground control systems.",
     image: "/images/news/745554.png",
   },
   {
     id: "334",
+    slug: "participates-science-festival-daejeon-autonomous-police",
     date: "2024-06-24",
     category: "NEWS",
-    title: "ARGOSDYNE, Participates in Science Festival with Daejeon Autonomous Police Committee",
+    title:
+      "ARGOSDYNE, Participates in Science Festival with Daejeon Autonomous Police Committee",
+    excerpt:
+      "ARGOSDYNE demonstrated public safety drone technology at a science festival with Daejeon Autonomous Police.",
+    body: "ARGOSDYNE participated in a science festival with the Daejeon Autonomous Police Committee, demonstrating how autonomous drones support public safety and emergency response missions.",
     image: "/images/news/827689.jpg",
   },
   {
     id: "333",
+    slug: "digital-pilot-branch-korea-expressway-corporation",
     date: "2024-06-24",
     category: "NEWS",
-    title: "ARGOSDYNE, Conducts Digital Pilot Branch Project with Korea Expressway Corporation",
+    title:
+      "ARGOSDYNE, Conducts Digital Pilot Branch Project with Korea Expressway Corporation",
+    excerpt:
+      "ARGOSDYNE launched a digital pilot branch project with Korea Expressway Corporation.",
+    body: "ARGOSDYNE conducts a Digital Pilot Branch Project with Korea Expressway Corporation, deploying autonomous drones and stations for highway surveillance and real-time road condition monitoring.",
     image: "/images/news/720150.png",
   },
 ];
@@ -569,4 +610,12 @@ export function getProductBySlug(slug: string): CompanyProduct | undefined {
 
 export function getSolutionBySlug(slug: string): CompanySolution | undefined {
   return solutions.find((s) => s.slug === slug);
+}
+
+export function getNewsBySlug(slug: string): NewsItem | undefined {
+  return newsItems.find((item) => item.slug === slug);
+}
+
+export function getAllNewsSlugs(): string[] {
+  return newsItems.map((item) => item.slug);
 }

@@ -3,12 +3,12 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import type { SupportItem } from "@/lib/types/company";
-import { getDemoIcon } from "@/lib/demo-icons";
+import { getCompanyIcon } from "@/lib/company-icons";
 import { tc } from "@/lib/theme-classes";
 import { cn } from "@/lib/utils";
 
 export function SupportCard({ item }: { item: SupportItem }) {
-  const Icon = getDemoIcon(item.icon);
+  const Icon = getCompanyIcon(item.icon);
   const content = (
     <>
       <div className={tc.iconBox}>

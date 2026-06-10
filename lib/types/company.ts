@@ -56,9 +56,12 @@ export interface PartnerLogo {
 
 export interface NewsItem {
   id: string;
+  slug: string;
   date: string;
   category: string;
   title: string;
+  excerpt?: string;
+  body?: string;
   image?: string;
 }
 

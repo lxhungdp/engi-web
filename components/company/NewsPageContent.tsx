@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { newsItems } from "@/lib/data/companyContent";
+import Link from "next/link";
+import { newsItems, companyRoutes } from "@/lib/adapters/company";
 import { PageHero } from "@/components/ui/SectionHeading";
 import { tc } from "@/lib/theme-classes";
 import { cn } from "@/lib/utils";
@@ -12,7 +13,11 @@ export function NewsGrid({ limit }: { limit?: number }) {
   return (
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {items.map((item) => (
-        <article key={item.id} className={cn("overflow-hidden", tc.card, tc.cardHover)}>
+        <Link
+          key={item.id}
+          href={companyRoutes.newsDetail(item.slug)}
+          className={cn("overflow-hidden", tc.card, tc.cardHover)}
+        >
           {item.image && (
             <div className="relative aspect-[16/10] bg-background-muted/30">
               <Image
@@ -28,11 +33,16 @@ export function NewsGrid({ limit }: { limit?: number }) {
             <p className="text-xs text-foreground-muted">
               {item.date} · {item.category}
             </p>
-            <h3 className={cn("font-heading mt-2 font-semibold leading-snug", tc.heading)}>
+            <h3
+              className={cn(
+                "font-heading mt-2 font-semibold leading-snug",
+                tc.heading,
+              )}
+            >
               {item.title}
             </h3>
           </div>
-        </article>
+        </Link>
       ))}
     </div>
   );

@@ -8,8 +8,9 @@ import {
   inquiryProducts,
   supportItems,
   warrantyTerms,
-} from "@/lib/data/companyContent";
-import { companyInfo, companyRoutes } from "@/lib/data/company/site";
+  companyInfo,
+  companyRoutes,
+} from "@/lib/adapters/company";
 import { SupportCard } from "@/components/company/SupportCard";
 import { PageHero } from "@/components/ui/SectionHeading";
 import { tc } from "@/lib/theme-classes";
