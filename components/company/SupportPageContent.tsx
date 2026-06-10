@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Send } from "lucide-react";
 import {
   argosCarePlans,
-  inquiryProducts,
   supportItems,
   warrantyTerms,
   companyInfo,
@@ -16,7 +15,11 @@ import { PageHero } from "@/components/ui/SectionHeading";
 import { tc } from "@/lib/theme-classes";
 import { cn } from "@/lib/utils";
 
-export function SupportPageContent() {
+export function SupportPageContent({
+  inquiryProducts,
+}: {
+  inquiryProducts: string[];
+}) {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

@@ -10,10 +10,10 @@ import {
   companyRoutes,
   heroSlides,
   partners,
-  products,
   solutions,
   supportItems,
 } from "@/lib/adapters/company";
+import type { CompanyProduct } from "@/lib/types/company";
 import { ProductCard } from "@/components/company/ProductCard";
 import { SolutionCard } from "@/components/company/SolutionCard";
 import { SupportCard } from "@/components/company/SupportCard";
@@ -110,7 +110,7 @@ export function HomeHero() {
   );
 }
 
-export function ProductPreviewSection() {
+export function ProductPreviewSection({ products }: { products: CompanyProduct[] }) {
   const featured = products.filter((p) => p.highlighted);
   return (
     <section className={cn(tc.section, tc.sectionAlt)}>

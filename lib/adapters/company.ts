@@ -1,17 +1,21 @@
-/** Data access layer for the company site. Swap implementation for Sanity in Phase 2. */
+/** Data access layer for the company site. Products from Sanity; other content static. */
+export {
+  getProducts,
+  getProductBySlug,
+  getProductSlugs,
+  getInquiryProducts,
+  productCategories,
+} from "@/lib/adapters/products";
+
 export {
   heroSlides,
-  products,
-  productCategories,
   solutions,
   partners,
   newsItems,
   argosCarePlans,
   warrantyTerms,
   supportItems,
-  inquiryProducts,
   productWorkflow,
-  getProductBySlug,
   getSolutionBySlug,
   getNewsBySlug,
   getAllNewsSlugs,

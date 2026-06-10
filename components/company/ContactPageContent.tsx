@@ -3,11 +3,15 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Send } from "lucide-react";
-import { companyInfo, companyRoutes, inquiryProducts } from "@/lib/adapters/company";
+import { companyInfo, companyRoutes } from "@/lib/adapters/company";
 import { tc } from "@/lib/theme-classes";
 import { cn } from "@/lib/utils";
 
-export function ContactPageContent() {
+export function ContactPageContent({
+  inquiryProducts,
+}: {
+  inquiryProducts: string[];
+}) {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

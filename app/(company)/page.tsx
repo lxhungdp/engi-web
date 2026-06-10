@@ -7,6 +7,7 @@ import {
   SupportPreviewSection,
 } from "@/components/company/HomeSections";
 import { CTASection } from "@/components/company/CTASection";
+import { getProducts } from "@/lib/adapters/company";
 import { buildPageMetadata, siteMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
@@ -15,11 +16,13 @@ export const metadata = buildPageMetadata({
   path: "/",
 });
 
-export default function HomePage() {
+export default async function HomePage() {
+  const products = await getProducts();
+
   return (
     <>
       <HomeHero />
-      <ProductPreviewSection />
+      <ProductPreviewSection products={products} />
       <SolutionPreviewSection />
       <PartnersSection />
       <NewsSection />

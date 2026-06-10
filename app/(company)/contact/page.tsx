@@ -1,4 +1,5 @@
 import { ContactPageContent } from "@/components/company/ContactPageContent";
+import { getInquiryProducts } from "@/lib/adapters/company";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
@@ -7,6 +8,7 @@ export const metadata = buildPageMetadata({
   path: "/contact",
 });
 
-export default function ContactPage() {
-  return <ContactPageContent />;
+export default async function ContactPage() {
+  const inquiryProducts = await getInquiryProducts();
+  return <ContactPageContent inquiryProducts={inquiryProducts} />;
 }

@@ -1,8 +1,5 @@
 import type { MetadataRoute } from "next";
-import {
-  getAllNewsSlugs,
-  products,
-} from "@/lib/adapters/company";
+import { getAllNewsSlugs, getProducts } from "@/lib/adapters/company";
 import { siteMetadata } from "@/lib/metadata";
 
 const staticRoutes = [
@@ -15,8 +12,9 @@ const staticRoutes = [
   "/privacy",
 ] as const;
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = siteMetadata.url;
+  const products = await getProducts();
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((path) => ({
     url: `${base}${path}`,

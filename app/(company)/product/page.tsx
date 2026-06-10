@@ -1,4 +1,5 @@
 import { ProductPageContent } from "@/components/company/ProductPageContent";
+import { getProducts } from "@/lib/adapters/company";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
@@ -8,6 +9,7 @@ export const metadata = buildPageMetadata({
   path: "/product",
 });
 
-export default function ProductPage() {
-  return <ProductPageContent />;
+export default async function ProductPage() {
+  const products = await getProducts();
+  return <ProductPageContent products={products} />;
 }

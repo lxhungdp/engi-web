@@ -3,15 +3,15 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import type { ProductCategory } from "@/lib/types/company";
-import { products, productCategories, companyRoutes } from "@/lib/adapters/company";
+import type { CompanyProduct, ProductCategory } from "@/lib/types/company";
+import { productCategories, companyRoutes } from "@/lib/adapters/company";
 import { ProductCard } from "@/components/company/ProductCard";
 import { CTASection } from "@/components/company/CTASection";
 import { PageHero } from "@/components/ui/SectionHeading";
 import { tc } from "@/lib/theme-classes";
 import { cn } from "@/lib/utils";
 
-export function ProductPageContent() {
+export function ProductPageContent({ products }: { products: CompanyProduct[] }) {
   const [filter, setFilter] = useState<ProductCategory | "All">("All");
   const filtered =
     filter === "All" ? products : products.filter((p) => p.category === filter);
