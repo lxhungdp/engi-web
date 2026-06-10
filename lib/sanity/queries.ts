@@ -1,4 +1,4 @@
-import type { CompanyProduct, ProductCategory } from "@/lib/types/company";
+import type { CompanyProduct, CompanySolution, ProductCategory } from "@/lib/types/company";
 import { sanityClient } from "@/lib/sanity/client";
 import { urlForImage } from "@/lib/sanity/image";
 
@@ -94,4 +94,82 @@ export async function fetchProductSlugs(): Promise<string[]> {
     {},
     fetchOptions,
   );
+}
+
+// ─── Solutions ───────────────────────────────────────────────────────────────
+
+const SOLUTION_FIELDS = `
+  name,
+  "slug": slug.current,
+  description,
+  problem,
+  benefits,
+  technology,
+  outcome,
+  image,
+  videos[]{ youtubeId, title, description },
+  icon,
+  sortOrder,
+  featured
+`;
+
+type SanitySolutionRaw = {
+  slug: string;
+  name: string;
+  description: string;
+  problem?: string | null;
+  benefits?: string[] | null;
+  technology?: string | null;
+  outcome?: string | null;
+  image?: unknown;
+  videos?: Array<{
+    youtubeId: string;
+    title: string;
+    description?: string | null;
+  }> | null;
+  icon: string;
+  sortOrder: number;
+  featured?: boolean | null;
+};
+
+function mapSolution(raw: SanitySolutionRaw): CompanySolution {
+  return {
+    slug: raw.slug,
+    name: raw.name,
+    description: raw.description,
+    problem: raw.problem ?? undefined,
+    benefits: raw.benefits ?? undefined,
+    technology: raw.technology ?? undefined,
+    outcome: raw.outcome ?? undefined,
+    image: urlForImage(raw.image),
+    videos: raw.videos?.length
+      ? raw.videos.map((video) => ({
+          youtubeId: video.youtubeId,
+          title: video.title,
+          description: video.description ?? undefined,
+        }))
+      : undefined,
+    icon: raw.icon,
+    featured: raw.featured ?? false,
+  };
+}
+
+export async function fetchSolutions(): Promise<CompanySolution[]> {
+  const data = await sanityClient.fetch<SanitySolutionRaw[]>(
+    `*[_type == "solution"] | order(sortOrder asc) { ${SOLUTION_FIELDS} }`,
+    {},
+    fetchOptions,
+  );
+  return data.map(mapSolution);
+}
+
+export async function fetchSolutionBySlug(
+  slug: string,
+): Promise<CompanySolution | undefined> {
+  const data = await sanityClient.fetch<SanitySolutionRaw | null>(
+    `*[_type == "solution" && slug.current == $slug][0] { ${SOLUTION_FIELDS} }`,
+    { slug },
+    fetchOptions,
+  );
+  return data ? mapSolution(data) : undefined;
 }

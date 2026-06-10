@@ -10,10 +10,9 @@ import {
   companyRoutes,
   heroSlides,
   partners,
-  solutions,
   supportItems,
 } from "@/lib/adapters/company";
-import type { CompanyProduct } from "@/lib/types/company";
+import type { CompanyProduct, CompanySolution } from "@/lib/types/company";
 import { ProductCard } from "@/components/company/ProductCard";
 import { SolutionCard } from "@/components/company/SolutionCard";
 import { SupportCard } from "@/components/company/SupportCard";
@@ -135,7 +134,11 @@ export function ProductPreviewSection({ products }: { products: CompanyProduct[]
   );
 }
 
-export function SolutionPreviewSection() {
+export function SolutionPreviewSection({
+  solutions,
+}: {
+  solutions: CompanySolution[];
+}) {
   return (
     <section className={cn(tc.section)}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

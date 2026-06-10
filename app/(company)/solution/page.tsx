@@ -1,4 +1,5 @@
 import { SolutionPageContent } from "@/components/company/SolutionPageContent";
+import { getSolutions } from "@/lib/adapters/company";
 import { buildPageMetadata } from "@/lib/metadata";
 
 export const metadata = buildPageMetadata({
@@ -7,6 +8,7 @@ export const metadata = buildPageMetadata({
   path: "/solution",
 });
 
-export default function SolutionPage() {
-  return <SolutionPageContent />;
+export default async function SolutionPage() {
+  const solutions = await getSolutions();
+  return <SolutionPageContent solutions={solutions} />;
 }

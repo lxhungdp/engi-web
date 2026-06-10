@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { solutions } from "@/lib/adapters/company";
+import type { CompanySolution } from "@/lib/types/company";
 import { YouTubeEmbed } from "@/components/company/YouTubeEmbed";
 import { CTASection } from "@/components/company/CTASection";
 import { PageHero } from "@/components/ui/SectionHeading";
@@ -9,7 +9,11 @@ import { getCompanyIcon } from "@/lib/company-icons";
 import { tc } from "@/lib/theme-classes";
 import { cn } from "@/lib/utils";
 
-export function SolutionPageContent() {
+export function SolutionPageContent({
+  solutions,
+}: {
+  solutions: CompanySolution[];
+}) {
   return (
     <>
       <PageHero

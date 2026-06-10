@@ -1,4 +1,4 @@
-/** Data access layer for the company site. Products from Sanity; other content static. */
+/** Data access layer for the company site. Products & solutions from Sanity. */
 export {
   getProducts,
   getProductBySlug,
@@ -7,16 +7,16 @@ export {
   productCategories,
 } from "@/lib/adapters/products";
 
+export { getSolutions, getSolutionBySlug } from "@/lib/adapters/solutions";
+
 export {
   heroSlides,
-  solutions,
   partners,
   newsItems,
   argosCarePlans,
   warrantyTerms,
   supportItems,
   productWorkflow,
-  getSolutionBySlug,
   getNewsBySlug,
   getAllNewsSlugs,
 } from "@/lib/data/companyContent";
