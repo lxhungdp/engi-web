@@ -1,5 +1,5 @@
 import type { CompanyProduct, CompanySolution, ProductCategory } from "@/lib/types/company";
-import { sanityClient } from "@/lib/sanity/client";
+import { getSanityClient } from "@/lib/sanity/client";
 import { urlForImage } from "@/lib/sanity/image";
 
 const PRODUCT_FIELDS = `
@@ -69,7 +69,7 @@ function mapProduct(raw: SanityProductRaw): CompanyProduct {
 const fetchOptions = { next: { revalidate: 60 } } as const;
 
 export async function fetchProducts(): Promise<CompanyProduct[]> {
-  const data = await sanityClient.fetch<SanityProductRaw[]>(
+  const data = await getSanityClient().fetch<SanityProductRaw[]>(
     `*[_type == "product"] | order(name asc) { ${PRODUCT_FIELDS} }`,
     {},
     fetchOptions,
@@ -80,7 +80,7 @@ export async function fetchProducts(): Promise<CompanyProduct[]> {
 export async function fetchProductBySlug(
   slug: string,
 ): Promise<CompanyProduct | undefined> {
-  const data = await sanityClient.fetch<SanityProductRaw | null>(
+  const data = await getSanityClient().fetch<SanityProductRaw | null>(
     `*[_type == "product" && slug.current == $slug][0] { ${PRODUCT_FIELDS} }`,
     { slug },
     fetchOptions,
@@ -89,7 +89,7 @@ export async function fetchProductBySlug(
 }
 
 export async function fetchProductSlugs(): Promise<string[]> {
-  return sanityClient.fetch<string[]>(
+  return getSanityClient().fetch<string[]>(
     `*[_type == "product"].slug.current`,
     {},
     fetchOptions,
@@ -155,7 +155,7 @@ function mapSolution(raw: SanitySolutionRaw): CompanySolution {
 }
 
 export async function fetchSolutions(): Promise<CompanySolution[]> {
-  const data = await sanityClient.fetch<SanitySolutionRaw[]>(
+  const data = await getSanityClient().fetch<SanitySolutionRaw[]>(
     `*[_type == "solution"] | order(sortOrder asc) { ${SOLUTION_FIELDS} }`,
     {},
     fetchOptions,
@@ -166,7 +166,7 @@ export async function fetchSolutions(): Promise<CompanySolution[]> {
 export async function fetchSolutionBySlug(
   slug: string,
 ): Promise<CompanySolution | undefined> {
-  const data = await sanityClient.fetch<SanitySolutionRaw | null>(
+  const data = await getSanityClient().fetch<SanitySolutionRaw | null>(
     `*[_type == "solution" && slug.current == $slug][0] { ${SOLUTION_FIELDS} }`,
     { slug },
     fetchOptions,
